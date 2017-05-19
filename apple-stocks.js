@@ -5,17 +5,22 @@
 // most profit may be negative if prices fall continuously.
 
 
+// Essentially, youre looking for the greatest dy in the graph, given that the slope between the low and high is positive.
+
+// iterate through the array, recording the lowest price, and the max profit we can get from selling (current - lowest)
+
 const findBestProfit = (stockPrices) => {
   var bestProfit = stockPrices[1] - stockPrices[0];
   var currentProfit;
   var lowest = stockPrices[0];
 
   stockPrices.slice(1).forEach((price) => {
+    currentProfit = price - lowest;
+
     if(price < lowest) {
       lowest = price;
     }
 
-    currentProfit = price - lowest;
     if(currentProfit > bestProfit) {
       bestProfit = currentProfit;
     }
@@ -37,9 +42,6 @@ console.log(findBestProfit([300, 400, 550, 200, 300]), ', should be 250');
 console.log(findBestProfit([100, 100, 100, 100, 100]), ', should be 0');
 
 // price falls all day
-console.log(findBestProfit([500, 400, 350, 300, 200]), ', should be -100');
+console.log(findBestProfit([500, 400, 350, 300, 200]), ', should be -50');
 
 
-// Essentially, youre looking for the greatest dy in the graph, given that the slope between the low and high is positive.
-
-// iterate through the array, recording the lowest price, and the max profit we can get from selling
