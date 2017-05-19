@@ -30,3 +30,8 @@ console.log(sumArray([0, 0, 0, 0]), 'should be [0, 0, 0, 0]');
 
 // should account for non numbers
 console.log(sumArray([2, 1, 3, 'a']), 'should return "Not a Number"');
+
+//////////////////////////////////////////
+//TODO: Refactor to reduce time complexity
+//////////////////////////////////////////
+
