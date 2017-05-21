@@ -40,20 +40,20 @@ const mergeMeetings = (array) => {
   return merged;
 }
 
-// two times touching
-console.log(mergeMeetings([[0, 1], [2, 3]]), 'should be: [[0,1], [2,3]]');
+// // two times touching
+// console.log(mergeMeetings([[0, 1], [2, 3]]), 'should be: [[0,1], [2,3]]');
 
-// times overlapping
-console.log(mergeMeetings([[6, 9], [5, 7]]), 'should be: [[5,9]');
+// // times overlapping
+// console.log(mergeMeetings([[6, 9], [5, 7]]), 'should be: [[5,9]');
 
-// times not connected
-console.log(mergeMeetings([[14, 15], [11, 12]]), 'should be: [[11,12], [14,15]]');
+// // times not connected
+// console.log(mergeMeetings([[14, 15], [11, 12]]), 'should be: [[11,12], [14,15]]');
 
-// one time nested within other time
-console.log(mergeMeetings([[17, 20], [18, 19]]), 'should be: [[17,20]');
+// // one time nested within other time
+// console.log(mergeMeetings([[17, 20], [18, 19]]), 'should be: [[17,20]');
 
-// three times touching
-console.log(mergeMeetings([[21, 22], [21, 23], [22, 24]]), 'should be: [[21,24]]');
+// // three times touching
+// console.log(mergeMeetings([[21, 22], [21, 23], [22, 24]]), 'should be: [[21,24]]');
 
 // all cases
 console.log(mergeMeetings([[0, 1], [2, 3], [6, 9], [5, 7], [14, 15], [11, 12], [17, 20], [18, 19], [21, 22], [21, 23], [22, 24]]), 'should be: [[0,1], [2,3], [5,9], [11,12], [14,15], [17,20], [21,24]]');
