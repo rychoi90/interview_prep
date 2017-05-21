@@ -13,15 +13,29 @@ const mergeMeetings = (array) => {
   var previous = sorted[0];
   var last;
 
-  sorted.slice(1).forEach((current) => {
-    if(previous[1] >= current[0]) {
-      previous = [previous[0],Math.max(previous[1],current[1])];
+  // sorted.slice(1).forEach((current) => {
+  //   if(previous[1] >= current[0]) {
+  //     previous = [previous[0],Math.max(previous[1],current[1])];
+  //   } else {
+  //     merged.push(previous);
+  //     previous = current;
+  //   }
+  // });
+  // merged.push(previous);
+
+  sorted.reduce((prev,curr) => {
+    if(prev[1] >= curr[0]) {
+      curr = [prev[0], Math.max(prev[1],curr[1])];
+      last = curr;
+      return curr;
     } else {
-      merged.push(previous);
-      previous = current;
+      merged.push(prev);
+      last = curr;
+      return curr;
     }
   });
-  merged.push(previous);
+  merged.push(last);
+
 
   return merged;
 }
